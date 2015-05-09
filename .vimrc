@@ -10,8 +10,10 @@ set laststatus=0
 set wildmenu
 set list
 set listchars=tab:>\ ,extends:< 
+"set listchars+=eol:<
 syntax on
 colorscheme desert
+"colorscheme evening
 
 " file
 set encoding=utf-8
