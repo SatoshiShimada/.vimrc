@@ -1,16 +1,22 @@
 set nocompatible
 
+" common
 set backspace=indent,eol,start
-syntax on
-
 set number
 set showcmd
+set cmdheight=1
+set ruler
+set laststatus=0
+set wildmenu
+set list
+set listchars=tab:>\ ,extends:< 
+syntax on
+colorscheme desert
 
 " file
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,iso-2022-jp,cp932,sjis,euc-jp
-"set noswapfile
 set swapfile
 set nowritebackup
 set nobackup
@@ -33,12 +39,11 @@ set incsearch
 set wrapscan
 
 " match
-"set noshowmatch
 set showmatch
 set matchtime=1
 
 
-" vim binary mode open with 'xxd' command
+" file open to binary mode with 'xxd' command
 augroup BinaryXXD
 	autocmd!
 	autocmd BufReadPre		*.bin let &binary =1
@@ -49,7 +54,7 @@ augroup BinaryXXD
 	autocmd BufWritePost	* set nomod | endif
 augroup END
 
-" key map when normal mode
+" [key map when normal mode]
 nnoremap j gj
 nnoremap k gk
 " delete character of beginning of line
@@ -59,10 +64,15 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 " [Control and 'e'] read file with file encoding 'cp932'
 nnoremap <C-e> :e ++enc=cp932<CR>
 
-" key map when visual mode
+" [key map when visual mode]
 vnoremap j gj
 vnoremap k gk
 
-" key map when insert mode
+" [key map when insert mode]
 "inoremap <C-j> <Esc>
 inoremap <C-j> <C-c>
+" automatically closes open parentheses
+"inoremap { {}<LEFT>
+"inoremap ( ()<LEFT>
+"inoremap [ []<LEFT>
+"inoremap < <><LEFT>
