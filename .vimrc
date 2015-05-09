@@ -9,6 +9,7 @@ set showcmd
 " file
 set encoding=utf-8
 set fileencoding=utf-8
+set fileencodings=utf-8,iso-2022-jp,cp932,sjis,euc-jp
 "set noswapfile
 set swapfile
 set nowritebackup
@@ -18,9 +19,10 @@ set wrap
 
 " indent
 set autoindent
+set smartindent
 set tabstop=4
 set shiftwidth=4
-set smartindent
+set softtabstop=0
 set noexpandtab
 
 " search
@@ -54,6 +56,8 @@ nnoremap k gk
 nnoremap <C-k> _x
 " clear screen and `set nohlsearch` when type [Control and 'l']
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+" [Control and 'e'] read file with file encoding 'cp932'
+nnoremap <C-e> :e ++enc=cp932<CR>
 
 " key map when visual mode
 vnoremap j gj
