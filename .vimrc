@@ -12,7 +12,8 @@ set list
 set listchars=tab:>\ ,extends:< 
 "set listchars+=eol:<
 syntax on
-colorscheme desert
+colorscheme default
+"colorscheme desert
 "colorscheme evening
 
 " file
