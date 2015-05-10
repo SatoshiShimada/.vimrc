@@ -13,8 +13,22 @@ set listchars=tab:>\ ,extends:<
 "set listchars+=eol:<
 syntax on
 colorscheme default
+"colorscheme elflord
+"colorscheme blue
+"colorscheme darkblue
+"colorscheme delek
+"colorscheme koehler
+"colorscheme morning
+"colorscheme murphy
+"colorscheme pablo
+"colorscheme peachpuff
 "colorscheme desert
 "colorscheme evening
+"colorscheme ron
+"colorscheme shine
+"colorscheme slate
+"colorscheme torte
+"colorscheme zellner
 
 " file
 set encoding=utf-8
