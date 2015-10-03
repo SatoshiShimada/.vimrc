@@ -4,7 +4,7 @@
 My config file for Vim.
 
 ## Description
-Simple and not use Plugin.
+Simple config
 color scheme list up.
 
 target host: Linux(Debian, Ubuntu, Archlinux), Windows(7, 8)

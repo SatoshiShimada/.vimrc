@@ -1,5 +1,7 @@
 set nocompatible
 
+filetype plugin on
+
 " common
 set backspace=indent,eol,start
 set number
