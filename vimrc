@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 " ===================================================
 " .vimrc
 " for Vim7.4
@@ -15,6 +16,11 @@ filetype indent on
 
 " --- common setting ---
 set title
+=======
+filetype plugin on
+
+" common
+>>>>>>> 4f6f76954d4596ff7f392d4823523568bd85c632
 set backspace=indent,eol,start
 set number
 set nocursorline
@@ -133,6 +139,7 @@ inoremap <C-j> <C-c>
 "inoremap ( ()<LEFT>
 "inoremap [ []<LEFT>
 "inoremap < <><LEFT>
+<<<<<<< HEAD
 
 " use Emacs key setting when insert mode
 inoremap <C-b> <Left>
@@ -144,3 +151,5 @@ inoremap <C-f> <Right>
 cnoremap <C-b> <Left>
 cnoremap <C-f> <Right>
 
+=======
+>>>>>>> 4f6f76954d4596ff7f392d4823523568bd85c632
