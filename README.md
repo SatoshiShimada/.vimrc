@@ -4,8 +4,9 @@
 My config file for Vim.
 
 ## Description
-Simple and not use Plugin.
+Simple setting.
 color scheme list up.
+status line show some information.
 
 target host: Linux(Debian, Ubuntu, Archlinux), Windows(7, 8)
 

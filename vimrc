@@ -1,17 +1,32 @@
-set nocompatible
 
-" common
+" ===================================================
+" .vimrc
+" for Vim7.4
+"
+" S.Shimada
+" Oct 6, 2015
+" ===================================================
+
+set nocompatible "IMproved
+
+syntax on
+filetype plugin on
+filetype indent on
+
+" --- common setting ---
+set title
 set backspace=indent,eol,start
 set number
-set showcmd
+set nocursorline
 set cmdheight=1
 set ruler
-set laststatus=0
 set wildmenu
 set list
 set listchars=tab:>\ ,extends:< 
 "set listchars+=eol:<
-syntax on
+" ---------------------------
+
+" --- color scheme list up ---
 colorscheme default
 "colorscheme elflord
 "colorscheme blue
@@ -29,8 +44,9 @@ colorscheme default
 "colorscheme slate
 "colorscheme torte
 "colorscheme zellner
+" ---------------------------
 
-" file
+" --- file ---
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,iso-2022-jp,cp932,sjis,euc-jp
@@ -39,26 +55,50 @@ set nowritebackup
 set nobackup
 set history=100
 set wrap
+" ---------------------------
 
-" indent
+" --- indent ---
 set autoindent
 set smartindent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=0
 set noexpandtab
+" ---------------------------
 
-" search
+" --- search ---
 set ignorecase
 set smartcase
 set hlsearch
 set incsearch
 set wrapscan
+" ---------------------------
 
-" match
+" --- match ---
 set showmatch
 set matchtime=1
+" ---------------------------
 
+" --- status line ---
+set laststatus=2
+set showcmd
+" file number
+set statusline=[%n]
+" host name
+set statusline+=%{matchstr(hostname(),'\\w\\+')}@
+" file name
+set statusline+=%<%F
+" is edited
+set statusline+=%m
+" is readonly
+set statusline+=%r
+" show file format
+set statusline+=[%{&fileformat}]
+" show encoding
+set statusline+=[%{has('multi_byte')&&\&fileencoding!=''?&fileencoding:&encoding}]
+" show file type
+set statusline+=%y
+" ---------------------------
 
 " file open to binary mode with 'xxd' command
 augroup BinaryXXD
@@ -93,3 +133,14 @@ inoremap <C-j> <C-c>
 "inoremap ( ()<LEFT>
 "inoremap [ []<LEFT>
 "inoremap < <><LEFT>
+
+" use Emacs key setting when insert mode
+inoremap <C-b> <Left>
+inoremap <C-n> <Down>
+inoremap <C-p> <Up>
+inoremap <C-f> <Right>
+
+" [key map when command mode]
+cnoremap <C-b> <Left>
+cnoremap <C-f> <Right>
+
