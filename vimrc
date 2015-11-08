@@ -11,7 +11,7 @@ set nocompatible "IMproved
 
 syntax on
 filetype plugin on
-filetype indent on
+"filetype indent on
 
 " --- common setting ---
 set title
