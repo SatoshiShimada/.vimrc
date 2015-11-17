@@ -4,7 +4,7 @@
 " for Vim7.4
 "
 " S.Shimada
-" Oct 6, 2015
+" Nov. 18, 2015
 " ===================================================
 
 set nocompatible "IMproved
@@ -110,6 +110,11 @@ augroup BinaryXXD
 	autocmd BufWritePost	* if &binary | silent %!xxd -g 1
 	autocmd BufWritePost	* set nomod | endif
 augroup END
+
+" file open to python mode
+autocmd FileType python setlocal autoindent
+autocmd FileType python setlocal smartindent cinwords=if,elif,else,for,while,tyr,except,finally,def,class
+autocmd FileType python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 " [key map when normal mode]
 nnoremap j gj
