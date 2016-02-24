@@ -4,11 +4,11 @@
 My config file for Vim.
 
 ## Description
-simple config
-color scheme list up.
+simple config  
+color scheme list up.  
 status line show some information.
 
-target host: Linux(Debian, Ubuntu, Archlinux), Windows(7, 8)
+target host: Linux(Debian, Ubuntu, Archlinux), Windows(7, 8), Mac(OSX10.9.5)
 
 version: Vim7.4
 
