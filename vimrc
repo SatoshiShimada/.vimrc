@@ -4,7 +4,7 @@
 " for Vim7.4
 "
 " S.Shimada
-" Nov. 18, 2015
+" Feb. 24, 2016
 " ===================================================
 
 set nocompatible "IMproved
@@ -14,7 +14,7 @@ filetype plugin on
 "filetype indent on
 
 " --- common setting ---
-set title
+set notitle
 set backspace=indent,eol,start
 set number
 set nocursorline
