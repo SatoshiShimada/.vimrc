@@ -79,6 +79,10 @@ set showmatch
 set matchtime=1
 " ---------------------------
 
+" --- completion ---
+set infercase
+" ---------------------------
+
 " --- status line ---
 set laststatus=2
 set showcmd
