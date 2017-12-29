@@ -9,8 +9,8 @@
 
 set nocompatible "IMproved
 
-syntax on
 filetype plugin on
+syntax on
 "filetype indent on
 
 " --- common setting ---
@@ -24,6 +24,7 @@ set wildmenu
 set list
 set listchars=tab:>\ ,extends:< 
 "set listchars+=eol:<
+set nrformats=
 " ---------------------------
 
 " --- color scheme list up ---
@@ -120,6 +121,9 @@ autocmd FileType python setlocal autoindent
 autocmd FileType python setlocal smartindent cinwords=if,elif,else,for,while,tyr,except,finally,def,class
 autocmd FileType python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
+" file open to lisp mode
+autocmd FileType lisp setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+
 " [key map when normal mode]
 nnoremap j gj
 nnoremap k gk
@@ -127,8 +131,6 @@ nnoremap k gk
 nnoremap <C-k> _x
 " clear screen and `set nohlsearch` when type [Control and 'l']
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
-" [Control and 'e'] read file with file encoding 'cp932'
-nnoremap <C-e> :e ++enc=cp932<CR>
 
 " [key map when visual mode]
 vnoremap j gj
@@ -143,7 +145,7 @@ inoremap <C-j> <C-c>
 "inoremap [ []<LEFT>
 "inoremap < <><LEFT>
 
-" use Emacs key setting when insert mode
+" use Emacs like key setting when insert mode
 inoremap <C-b> <Left>
 inoremap <C-n> <Down>
 inoremap <C-p> <Up>
