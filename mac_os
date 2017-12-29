@@ -1,0 +1,17 @@
+
+" speak line
+function KillSpeak()
+  :call system("codespeak -1 &")
+  :call system("pkill say")
+  return 0
+endfunction
+noremap mh :call KillSpeak()<cr>
+
+function SayKyoko()
+  let sub_str = substitute(getline('.'), "['-]", " ", "g")
+  :call KillSpeak()
+  :call system("say -v Victoria -r 256 '".sub_str."' &")
+  return 123
+endfunction
+noremap vv :call SayKyoko()<cr>
+
