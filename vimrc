@@ -118,11 +118,14 @@ augroup END
 
 " file open to python mode
 autocmd FileType python setlocal autoindent
-autocmd FileType python setlocal smartindent cinwords=if,elif,else,for,while,tyr,except,finally,def,class
+autocmd FileType python setlocal smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 autocmd FileType python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 " file open to lisp mode
 autocmd FileType lisp setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+
+" file open to markdown mode
+autocmd FileType markdown setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 " [key map when normal mode]
 nnoremap j gj
